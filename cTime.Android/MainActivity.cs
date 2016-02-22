@@ -1,10 +1,13 @@
-﻿using Android.App;
+﻿using System.Net.Cache;
+using Android.App;
 using Android.OS;
 using Android.Support.V4.Widget;
 using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
 using cTime.Android.Activites;
+using Org.Apache.Http.Client.Methods;
+using Org.Apache.Http.Protocol;
 using ActionBarDrawerToggle = cTime.Android.Toggles.ActionBarDrawerToggle;
 using SupportToolbar = Android.Support.V7.Widget.Toolbar;
 
@@ -23,12 +26,15 @@ namespace cTime.Android
             base.OnCreate(bundle);
             this.SetContentView(Resource.Layout.Toolbar);
 
+            this.Window.AddFlags(WindowManagerFlags.DrawsSystemBarBackgrounds);
+
+            //Main
             this._toolbar = this.FindViewById<SupportToolbar>(Resource.Id.toolbar);
             this._drawerLayout = this.FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
             this._leftDrawer = this.FindViewById<ListView>(Resource.Id.left_drawer);
 
             this.SetSupportActionBar(this._toolbar);
-
+            
             this._actionBarDrawerToggle = new ActionBarDrawerToggle(this, this._drawerLayout, Resource.String.openDrawer,
                 Resource.String.closeDrawer);
 
@@ -37,9 +43,15 @@ namespace cTime.Android
             this.SupportActionBar.SetDisplayShowTitleEnabled(true);
             this.SupportActionBar.SetDisplayHomeAsUpEnabled(true);
             this._actionBarDrawerToggle.SyncState();
+            
+            //DialogFragment
+            var anmeldenButton = this.FindViewById<Button>(Resource.Id.anmelden);
 
             var fragmentTransaction = this.FragmentManager.BeginTransaction();
-            var login = new LoginDialogFragment();
+            var login = new LoginDialogFragment
+            {
+                AnmeldenButton = anmeldenButton
+            };
             login.Show(fragmentTransaction, "Login Dialog");
         }
 
