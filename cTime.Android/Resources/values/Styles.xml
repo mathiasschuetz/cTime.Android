@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+  <style name="cTime" parent="Theme.AppCompat.Light.NoActionBar">
+    <item name="colorPrimary">#ffff9800</item>
+    <item name="colorPrimaryDark">#fff57c00</item>
+    <item name="colorAccent">#fffff176</item>
+    <item name="colorControlActivated">#ffffa726</item>
+    <item name="drawerArrowStyle">@style/MyDrawerArrowStyle</item>
+  </style>
+
+  <style name="MyDrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">
+    <item name="color">#FFFFFF</item>
+    <item name="spinBars">true</item>
+  </style>
+</resources>
