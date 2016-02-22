@@ -26,6 +26,8 @@ namespace cTime.Android
 		
 		public static void UpdateIdValues()
 		{
+			global::cTime.Android.Core.Resource.String.ApplicationName = global::cTime.Android.Resource.String.ApplicationName;
+			global::cTime.Android.Core.Resource.String.Hello = global::cTime.Android.Resource.String.Hello;
 		}
 		
 		public partial class Animation
@@ -1520,7 +1522,7 @@ namespace cTime.Android
 			public const int password = 2131427409;
 			
 			// aapt resource value: 0x7f0b0053
-			public const int progressBar1 = 2131427411;
+			public const int progressBar = 2131427411;
 			
 			// aapt resource value: 0x7f0b0005
 			public const int progress_circular = 2131427333;

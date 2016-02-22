@@ -44,14 +44,8 @@ namespace cTime.Android
             this.SupportActionBar.SetDisplayHomeAsUpEnabled(true);
             this._actionBarDrawerToggle.SyncState();
             
-            //DialogFragment
-            var anmeldenButton = this.FindViewById<Button>(Resource.Id.anmelden);
-
             var fragmentTransaction = this.FragmentManager.BeginTransaction();
-            var login = new LoginDialogFragment
-            {
-                AnmeldenButton = anmeldenButton
-            };
+            var login = new LoginDialogFragment();
             login.Show(fragmentTransaction, "Login Dialog");
         }
 

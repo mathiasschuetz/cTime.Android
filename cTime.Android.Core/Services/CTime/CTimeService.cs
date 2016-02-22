@@ -20,11 +20,12 @@ namespace cTime.Android.Core.Services.CTime
             {
                 var url = BuildUri("/ctimetrack/php/GetRFIDbyLoginName.php");
                 var request = (HttpWebRequest) WebRequest.Create(url);
-                request.Method = "GET/POST";
+                request.Method = "POST";
                 request.Headers.Add("Password", password);
                 request.Headers.Add("LoginName", emailAddress);
                 request.Headers.Add("GUIDlogin", companyId);
                 request.ContentType = "application/json";
+                request.ContentLength = request.Headers.ToByteArray().Length;
 
                 string responseText;
 
@@ -61,7 +62,7 @@ namespace cTime.Android.Core.Services.CTime
                     ImageAsPng = Convert.FromBase64String(user.Value<string>("EmployeePhoto") ?? string.Empty),
                 };
             }
-            catch (Exception)
+            catch (Exception e)
             {
                 return null;
             }

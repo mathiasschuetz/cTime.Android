@@ -100,7 +100,12 @@
       <Version>22.2.0.0</Version>
     </XamarinComponentReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\cTime.Android.Core\cTime.Android.Core.csproj">
+      <Project>{02DD0E9C-5AB3-4FB4-8927-EEC3A5B0DF71}</Project>
+      <Name>cTime.Android.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\values\Styles.xml" />
   </ItemGroup>
