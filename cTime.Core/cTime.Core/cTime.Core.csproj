@@ -41,10 +41,7 @@
     <Compile Include="Results\ResultData.cs" />
     <Compile Include="Results\ResultState.cs" />
     <Compile Include="Service\CTimeService.cs" />
-    <Compile Include="Service\CTimeStampHelper.cs" />
-    <Compile Include="Service\CTimeStampHelperCallback.cs" />
     <Compile Include="Service\ICTimeService.cs" />
-    <Compile Include="Service\ICTimeStampHelperCallback.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">

@@ -6,8 +6,6 @@ namespace cTime.Core.Data
 
         public License(string name)
         {
-            Guard.NotNull(name, nameof(name));
-
             this.Name = name;
         }
     }

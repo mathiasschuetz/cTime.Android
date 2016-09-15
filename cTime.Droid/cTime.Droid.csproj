@@ -81,7 +81,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LoginActivity.cs" />
+    <Compile Include="Activities\Login\LoginActivity.cs" />
+    <Compile Include="Activities\Overview\OverviewTabNavigation.cs" />
+    <Compile Include="Activities\Overview\PresentListFragment.cs" />
+    <Compile Include="Activities\Overview\StampFragment.cs" />
+    <Compile Include="Activities\Overview\TimeListFragment.cs" />
+    <Compile Include="Adapter\ViewPagerAdapter.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -137,6 +142,36 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\ic_alarm_white_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\cTime.Core\cTime.Core\cTime.Core.csproj">
+      <Project>{3B30C083-5AC4-4B34-B8B8-F4FF410639C0}</Project>
+      <Name>cTime.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\Toolbar.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\StampFragment.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\ToolbarSettings.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_settings_white_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_settings_white_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_settings_white_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-mdpi\ic_settings_white_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-hdpi\ic_settings_white_24dp.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Android.Support.Vector.Drawable.23.4.0.1\build\Xamarin.Android.Support.Vector.Drawable.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Vector.Drawable.23.4.0.1\build\Xamarin.Android.Support.Vector.Drawable.targets')" />
